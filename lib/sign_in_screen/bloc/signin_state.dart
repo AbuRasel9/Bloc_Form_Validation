@@ -1,6 +1,12 @@
 abstract class SigninState{}
-class validState extends SigninState{}
-class ErrorState extends SigninState{
+class SigninInitialState extends SigninState{}
+
+class SigninvalidState extends SigninState{}
+
+
+class SigninErrorState extends SigninState{
   final String errorText;
-  ErrorState(this.errorText);
+  SigninErrorState(this.errorText);
 }
+
+class SigninLoadingState extends SigninState{}
